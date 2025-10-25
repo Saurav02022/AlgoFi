@@ -20,7 +20,7 @@ function Marketplace({ account, connected }) {
         price: 5000000,
         purchasable: true,
         description: 'A stunning digital artwork exploring the cosmos',
-        imageUrl: 'https://via.placeholder.com/400/6B46C1/FFFFFF?text=Cosmic+Dreams'
+        imageUrl: 'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=911'
       },
       {
         id: 2,
@@ -30,7 +30,7 @@ function Marketplace({ account, connected }) {
         price: 3000000,
         purchasable: true,
         description: 'Chill beats for summer days',
-        imageUrl: 'https://via.placeholder.com/400/EC4899/FFFFFF?text=Summer+Vibes'
+        imageUrl: 'https://plus.unsplash.com/premium_vector-1758615402989-6e1576b07d99?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=805'
       },
       {
         id: 3,
@@ -40,7 +40,7 @@ function Marketplace({ account, connected }) {
         price: 0,
         purchasable: false,
         description: 'Limited edition genesis collectible',
-        imageUrl: 'https://via.placeholder.com/400/8B5CF6/FFFFFF?text=Genesis'
+        imageUrl: 'https://images.unsplash.com/photo-1572025132259-70ae786dbc3e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687'
       },
       {
         id: 4,
@@ -50,7 +50,7 @@ function Marketplace({ account, connected }) {
         price: 7500000,
         purchasable: true,
         description: 'Expressing feelings through abstract art',
-        imageUrl: 'https://via.placeholder.com/400/F59E0B/FFFFFF?text=Abstract'
+        imageUrl: 'https://images.unsplash.com/photo-1615184697985-c9bde1b07da7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074'
       },
       {
         id: 5,
@@ -60,7 +60,7 @@ function Marketplace({ account, connected }) {
         price: 4000000,
         purchasable: true,
         description: 'Epic orchestral composition',
-        imageUrl: 'https://via.placeholder.com/400/10B981/FFFFFF?text=Epic'
+        imageUrl: 'https://images.unsplash.com/photo-1648461513577-8521ecdf50c5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170'
       },
       {
         id: 6,
@@ -70,7 +70,7 @@ function Marketplace({ account, connected }) {
         price: 0,
         purchasable: false,
         description: 'Free community supporter badge',
-        imageUrl: 'https://via.placeholder.com/400/3B82F6/FFFFFF?text=Badge'
+        imageUrl: 'https://images.unsplash.com/photo-1645604136298-0c5ab75630f4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1172'
       }
     ];
 
