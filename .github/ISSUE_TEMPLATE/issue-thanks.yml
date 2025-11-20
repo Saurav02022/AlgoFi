@@ -1,6 +1,6 @@
 name: Issue Thank You Bot
 
-on:
+"on":
   issues:
     types: [opened]
 
