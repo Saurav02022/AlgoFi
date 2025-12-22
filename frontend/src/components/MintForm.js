@@ -79,7 +79,7 @@ function MintForm({ account, onMintSuccess }) {
 
       // Send JSON data (not FormData)
       const response = await axios.post(`${API_URL}/nfts/mint`, {
-        creator: account,  // ← This is the KEY fix!
+        creator: account,  
         name: formData.name,
         type: formData.type,
         purchasable: formData.purchasable,
