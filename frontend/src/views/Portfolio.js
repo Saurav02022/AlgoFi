@@ -29,7 +29,7 @@ function Portfolio({ account, connected }) {
     try {
       // In production, fetch from backend/indexer
       const response = await axios.get(`${API_URL}/nfts/account/${account}`);
-      
+
       // Mock data for demonstration
       const mockNfts = [
         {
@@ -55,7 +55,7 @@ function Portfolio({ account, connected }) {
       ];
 
       setMyNfts(mockNfts);
-      
+
       // Calculate stats
       const stats = {
         totalNfts: mockNfts.length,
@@ -109,23 +109,23 @@ function Portfolio({ account, connected }) {
 
       {/* Stats Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-        <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-500/20">
+        <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-500/20 transition transform duration-300 hover:scale-105 hover-glitter cursor-default">
           <p className="text-gray-400 text-sm mb-1">Total NFTs</p>
           <p className="text-3xl font-bold text-white">{stats.totalNfts}</p>
         </div>
-        <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-500/20">
+        <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-500/20 transition transform duration-300 hover:scale-105 hover-glitter cursor-default">
           <p className="text-gray-400 text-sm mb-1">🎨 Art</p>
           <p className="text-3xl font-bold text-purple-400">{stats.artNfts}</p>
         </div>
-        <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-500/20">
+        <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-500/20 transition transform duration-300 hover:scale-105 hover-glitter cursor-default">
           <p className="text-gray-400 text-sm mb-1">🎵 Music</p>
           <p className="text-3xl font-bold text-pink-400">{stats.musicNfts}</p>
         </div>
-        <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-500/20">
+        <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-500/20 transition transform duration-300 hover:scale-105 hover-glitter cursor-default">
           <p className="text-gray-400 text-sm mb-1">💎 Standard</p>
           <p className="text-3xl font-bold text-blue-400">{stats.standardNfts}</p>
         </div>
-        <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-500/20">
+        <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-500/20 transition transform duration-300 hover:scale-105 hover-glitter cursor-default">
           <p className="text-gray-400 text-sm mb-1">Total Value</p>
           <p className="text-2xl font-bold text-green-400">{formatPrice(stats.totalValue)} ALGO</p>
         </div>
@@ -160,21 +160,19 @@ function Portfolio({ account, connected }) {
       <div className="flex space-x-2 border-b border-purple-500/20">
         <button
           onClick={() => setActiveTab('owned')}
-          className={`px-6 py-3 font-medium transition border-b-2 ${
-            activeTab === 'owned'
+          className={`px-6 py-3 font-medium transition border-b-2 ${activeTab === 'owned'
               ? 'border-purple-500 text-purple-400'
               : 'border-transparent text-gray-400 hover:text-gray-300'
-          }`}
+            }`}
         >
           Owned NFTs ({myNfts.length})
         </button>
         <button
           onClick={() => setActiveTab('created')}
-          className={`px-6 py-3 font-medium transition border-b-2 ${
-            activeTab === 'created'
+          className={`px-6 py-3 font-medium transition border-b-2 ${activeTab === 'created'
               ? 'border-purple-500 text-purple-400'
               : 'border-transparent text-gray-400 hover:text-gray-300'
-          }`}
+            }`}
         >
           Created NFTs ({createdNfts.length})
         </button>
