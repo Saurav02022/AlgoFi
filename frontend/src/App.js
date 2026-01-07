@@ -183,7 +183,7 @@ function App() {
 
               <div className="border-t border-purple-200 dark:border-purple-500/20 mt-8 pt-8 text-center">
                 <p className="text-slate-600 dark:text-gray-400">
-                  © 2025 AlgoFi. Built on Algorand TestNet.
+                  © 2026 AlgoFi. Built on Algorand TestNet.
                 </p>
               </div>
             </div>
