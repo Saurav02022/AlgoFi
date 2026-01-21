@@ -1,8 +1,14 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import ThemeToggle from './ThemeToggle';
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import ThemeToggle from "./ThemeToggle";
 
-function Header({ account, connected, connectWallet, disconnectWallet, loading }) {
+function Header({
+  account,
+  connected,
+  connectWallet,
+  disconnectWallet,
+  loading,
+}) {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -11,14 +17,14 @@ function Header({ account, connected, connectWallet, disconnectWallet, loading }
   };
 
   const formatAddress = (address) => {
-    if (!address) return '';
+    if (!address) return "";
     return `${address.slice(0, 6)}...${address.slice(-4)}`;
   };
 
   const navLinks = [
-    { path: '/', label: 'Home' },
-    { path: '/marketplace', label: 'Marketplace' },
-    { path: '/portfolio', label: 'Portfolio' }
+    { path: "/", label: "Home" },
+    { path: "/marketplace", label: "Marketplace" },
+    { path: "/portfolio", label: "Portfolio" },
   ];
 
   return (
@@ -38,14 +44,17 @@ function Header({ account, connected, connectWallet, disconnectWallet, loading }
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-lg font-medium transition relative group ${isActive(link.path)
-                    ? 'text-sketch-mustard'
-                    : 'text-sketch-text hover:text-sketch-mustard'
-                  }`}
+                className={`text-lg font-medium transition relative group ${
+                  isActive(link.path)
+                    ? "text-sketch-mustard"
+                    : "text-sketch-text hover:text-sketch-mustard"
+                }`}
               >
                 {link.label}
                 {/* Underline sketch effect */}
-                <span className={`absolute -bottom-1 left-0 w-full h-0.5 bg-sketch-mustard transform origin-left transition-transform duration-300 ${isActive(link.path) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></span>
+                <span
+                  className={`absolute -bottom-1 left-0 w-full h-0.5 bg-sketch-mustard transform origin-left transition-transform duration-300 ${isActive(link.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
+                ></span>
               </Link>
             ))}
           </div>
@@ -61,7 +70,7 @@ function Header({ account, connected, connectWallet, disconnectWallet, loading }
                 </div>
                 <button
                   onClick={disconnectWallet}
-                  className="px-4 py-2 bg-[#292524] hover:bg-red-900/30 text-red-400 border-2 border-red-900/50 rounded-lg font-medium transition font-['Fredoka_One']"
+                  className="btn-sketch-secondary px-4 py-2 text-base"
                 >
                   Disconnect
                 </button>
@@ -72,7 +81,7 @@ function Header({ account, connected, connectWallet, disconnectWallet, loading }
                 disabled={loading}
                 className="btn-sketch-primary"
               >
-                {loading ? 'Connecting...' : 'Connect Wallet'}
+                {loading ? "Connecting..." : "Connect Wallet"}
               </button>
             )}
             <ThemeToggle />
@@ -85,21 +94,21 @@ function Header({ account, connected, connectWallet, disconnectWallet, loading }
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 text-sketch-text hover:text-sketch-mustard"
             >
-            <svg
-              className="w-8 h-8"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2.5"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              {mobileMenuOpen ? (
-                <path d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
+              <svg
+                className="w-8 h-8"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2.5"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                {mobileMenuOpen ? (
+                  <path d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
             </button>
           </div>
         </div>
@@ -112,10 +121,11 @@ function Header({ account, connected, connectWallet, disconnectWallet, loading }
                 key={link.path}
                 to={link.path}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`block px-4 py-2 rounded-lg font-medium text-lg ${isActive(link.path)
-                    ? 'bg-sketch-mustard text-black'
-                    : 'text-sketch-text hover:bg-sketch-border'
-                  }`}
+                className={`block px-4 py-2 rounded-lg font-medium text-lg ${
+                  isActive(link.path)
+                    ? "bg-sketch-mustard text-black"
+                    : "text-sketch-text hover:bg-sketch-border"
+                }`}
               >
                 {link.label}
               </Link>
@@ -134,7 +144,7 @@ function Header({ account, connected, connectWallet, disconnectWallet, loading }
                       disconnectWallet();
                       setMobileMenuOpen(false);
                     }}
-                    className="w-full px-4 py-2 bg-red-900/20 text-red-400 border-2 border-red-900/50 rounded-lg font-medium transition font-['Fredoka_One']"
+                    className="w-full btn-sketch-secondary py-3"
                   >
                     Disconnect
                   </button>
@@ -148,7 +158,7 @@ function Header({ account, connected, connectWallet, disconnectWallet, loading }
                   disabled={loading}
                   className="w-full btn-sketch-primary"
                 >
-                  {loading ? 'Connecting...' : 'Connect Wallet'}
+                  {loading ? "Connecting..." : "Connect Wallet"}
                 </button>
               )}
             </div>
